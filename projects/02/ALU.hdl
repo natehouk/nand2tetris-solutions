@@ -56,8 +56,8 @@ CHIP ALU {
 
     // x + y OR x & y
     Add16(a=x2, b=y2, out=added);
-    And16(a=x2, b=y2, out=xyand);
-    Mux16(a=xyand, b=added, sel=f, out=result);
+    And16(a=x2, b=y2, out=anded);
+    Mux16(a=anded, b=added, sel=f, out=result);
 
     // no
     Not16(in=result, out=notresult);
